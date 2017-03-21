@@ -13,7 +13,7 @@ class FullscreenVC: UIViewController {
     @IBOutlet weak var videoView: UIWebView!
     
     let tapGesture  = UITapGestureRecognizer()
-    var videoURL    = ""
+    var videoURL    = "URL"
     
     override func viewDidLoad()
     {

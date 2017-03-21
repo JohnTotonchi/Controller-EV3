@@ -33,9 +33,9 @@ class HomeVC: UIViewController
     @IBOutlet weak var alertSignal: UIView!
     
     // MARK: Variables
-    let videoURL01      = "http://192.168.0.151:8082"
-    let videoURL02      = "http://192.168.0.151:8083"
-    let socket          = SocketIOClient(socketURL: URL(string: "http://192.168.0.150:3000")!, config: [.log(true), .forcePolling(true)])
+    let videoURL01      = "URL"
+    let videoURL02      = "URL"
+    let socket          = SocketIOClient(socketURL: URL(string: "http://URL")!, config: [.log(true), .forcePolling(true)])
     var modeManuel      = false
     var alertIsOn       = false
     let myColor         = UIColor(red: 229/255, green: 115/255, blue: 115/255, alpha: 1)
