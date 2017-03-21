@@ -387,8 +387,4 @@ class HomeVC: UIViewController
         
         self.present(fullscreenVC, animated: true, completion: nil)
     }
-    
-    
-    
-    
 }
