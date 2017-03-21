@@ -1,0 +1,18 @@
+PODS:
+  - CDJoystick (1.0.0)
+  - Socket.IO-Client-Swift (8.3.0)
+  - SwiftyJSON (3.1.4)
+
+DEPENDENCIES:
+  - CDJoystick
+  - Socket.IO-Client-Swift (~> 8.3.0)
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  CDJoystick: 57e55e2c212c30ba329f26673b1fcd1af6394ae5
+  Socket.IO-Client-Swift: 7ad3aded3c0f74d99555e950ac3aa82ca3eefbaf
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+
+PODFILE CHECKSUM: bd331222a18477633a9a4e6f90426afc8f17ed8d
+
+COCOAPODS: 1.2.0

@@ -1,0 +1,40 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "AckCallback"
+- "NormalCallback"
+- "OnAckCallback"
+- "Either"
+provides-nominal:
+- "O19SocketIOClientSwift6Either"
+provides-member:
+- ["O19SocketIOClientSwift6Either", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "OnAckCallback"
+- "AnyObject"
+- "Either"
+- "NormalCallback"
+- "UInt64"
+- "Void"
+- "AckCallback"
+- "SocketAckEmitter"
+depends-member:
+- ["O19SocketIOClientSwift6Either", "E"]
+- ["O19SocketIOClientSwift6Either", "Left"]
+- ["O19SocketIOClientSwift6Either", "Right"]
+- ["O19SocketIOClientSwift6Either", "V"]
+depends-nominal:
+- "O19SocketIOClientSwift6Either"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Users/Jordy/Documents/PROGRAMMATION/Projet2A/iOS/ControllerEV3/Pods/Target Support Files/Socket.IO-Client-Swift/Socket.IO-Client-Swift-umbrella.h"
+- "/Users/Jordy/Documents/PROGRAMMATION/Projet2A/iOS/ControllerEV3/build/Pods.build/Debug-iphoneos/Socket.IO-Client-Swift.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+interface-hash: "5b90376d7811cbe07bbbe306a5eeda8f"

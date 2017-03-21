@@ -1,0 +1,472 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "FullscreenVC"
+provides-nominal:
+- "C13ControllerEV312FullscreenVC"
+provides-member:
+- ["C13ControllerEV312FullscreenVC", ""]
+provides-dynamic-lookup:
+- "videoView"
+- "viewDidLoad"
+- "tapGesture"
+- "leavePopView"
+- "viewWillAppear"
+- "didReceiveMemoryWarning"
+- "videoURL"
+depends-top-level:
+- "UIViewController"
+- !private "NSURL"
+- "StringLiteralType"
+- "UIWebView"
+- "Bool"
+- "FullscreenVC"
+- !private "NSURLRequest"
+- "UITapGestureRecognizer"
+- !private "BooleanLiteralType"
+depends-member:
+- !private ["Ps9AnyObject", "FullscreenVC"]
+- !private ["Ps9AnyObject", "NSURL"]
+- !private ["Ps9AnyObject", "NSURLRequest"]
+- ["Ps9AnyObject", "UITapGestureRecognizer"]
+- !private ["Ps9AnyObject", "addGestureRecognizer"]
+- !private ["Ps9AnyObject", "addTarget"]
+- ["Ps9AnyObject", "didReceiveMemoryWarning"]
+- !private ["Ps9AnyObject", "dismissViewControllerAnimated"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "leavePopView"]
+- !private ["Ps9AnyObject", "loadRequest"]
+- !private ["Ps9AnyObject", "scrollView"]
+- ["Ps9AnyObject", "tapGesture"]
+- !private ["Ps9AnyObject", "userInteractionEnabled"]
+- ["Ps9AnyObject", "videoURL"]
+- ["Ps9AnyObject", "videoView"]
+- !private ["Ps9AnyObject", "view"]
+- ["Ps9AnyObject", "viewDidLoad"]
+- ["Ps9AnyObject", "viewWillAppear"]
+- ["Ps9AnyObject", ""]
+- !private ["Ps11CVarArgType", "FullscreenVC"]
+- !private ["Ps11CVarArgType", "NSURL"]
+- !private ["Ps11CVarArgType", "NSURLRequest"]
+- ["Ps11CVarArgType", "UITapGestureRecognizer"]
+- !private ["Ps11CVarArgType", "addGestureRecognizer"]
+- !private ["Ps11CVarArgType", "addTarget"]
+- ["Ps11CVarArgType", "didReceiveMemoryWarning"]
+- !private ["Ps11CVarArgType", "dismissViewControllerAnimated"]
+- ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "leavePopView"]
+- !private ["Ps11CVarArgType", "loadRequest"]
+- !private ["Ps11CVarArgType", "scrollView"]
+- ["Ps11CVarArgType", "tapGesture"]
+- !private ["Ps11CVarArgType", "userInteractionEnabled"]
+- ["Ps11CVarArgType", "videoURL"]
+- ["Ps11CVarArgType", "videoView"]
+- !private ["Ps11CVarArgType", "view"]
+- ["Ps11CVarArgType", "viewDidLoad"]
+- ["Ps11CVarArgType", "viewWillAppear"]
+- ["Ps11CVarArgType", ""]
+- !private ["Ps28CustomDebugStringConvertible", "FullscreenVC"]
+- !private ["Ps28CustomDebugStringConvertible", "NSURL"]
+- !private ["Ps28CustomDebugStringConvertible", "NSURLRequest"]
+- ["Ps28CustomDebugStringConvertible", "UITapGestureRecognizer"]
+- !private ["Ps28CustomDebugStringConvertible", "addGestureRecognizer"]
+- !private ["Ps28CustomDebugStringConvertible", "addTarget"]
+- ["Ps28CustomDebugStringConvertible", "didReceiveMemoryWarning"]
+- !private ["Ps28CustomDebugStringConvertible", "dismissViewControllerAnimated"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "leavePopView"]
+- !private ["Ps28CustomDebugStringConvertible", "loadRequest"]
+- !private ["Ps28CustomDebugStringConvertible", "scrollView"]
+- ["Ps28CustomDebugStringConvertible", "tapGesture"]
+- !private ["Ps28CustomDebugStringConvertible", "userInteractionEnabled"]
+- ["Ps28CustomDebugStringConvertible", "videoURL"]
+- ["Ps28CustomDebugStringConvertible", "videoView"]
+- !private ["Ps28CustomDebugStringConvertible", "view"]
+- ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
+- ["Ps28CustomDebugStringConvertible", "viewWillAppear"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps23CustomStringConvertible", "FullscreenVC"]
+- !private ["Ps23CustomStringConvertible", "NSURL"]
+- !private ["Ps23CustomStringConvertible", "NSURLRequest"]
+- ["Ps23CustomStringConvertible", "UITapGestureRecognizer"]
+- !private ["Ps23CustomStringConvertible", "addGestureRecognizer"]
+- !private ["Ps23CustomStringConvertible", "addTarget"]
+- ["Ps23CustomStringConvertible", "didReceiveMemoryWarning"]
+- !private ["Ps23CustomStringConvertible", "dismissViewControllerAnimated"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "leavePopView"]
+- !private ["Ps23CustomStringConvertible", "loadRequest"]
+- !private ["Ps23CustomStringConvertible", "scrollView"]
+- ["Ps23CustomStringConvertible", "tapGesture"]
+- !private ["Ps23CustomStringConvertible", "userInteractionEnabled"]
+- ["Ps23CustomStringConvertible", "videoURL"]
+- ["Ps23CustomStringConvertible", "videoView"]
+- !private ["Ps23CustomStringConvertible", "view"]
+- ["Ps23CustomStringConvertible", "viewDidLoad"]
+- ["Ps23CustomStringConvertible", "viewWillAppear"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Ps9Equatable", "FullscreenVC"]
+- !private ["Ps9Equatable", "NSURL"]
+- !private ["Ps9Equatable", "NSURLRequest"]
+- ["Ps9Equatable", "UITapGestureRecognizer"]
+- !private ["Ps9Equatable", "addGestureRecognizer"]
+- !private ["Ps9Equatable", "addTarget"]
+- ["Ps9Equatable", "didReceiveMemoryWarning"]
+- !private ["Ps9Equatable", "dismissViewControllerAnimated"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "leavePopView"]
+- !private ["Ps9Equatable", "loadRequest"]
+- !private ["Ps9Equatable", "scrollView"]
+- ["Ps9Equatable", "tapGesture"]
+- !private ["Ps9Equatable", "userInteractionEnabled"]
+- ["Ps9Equatable", "videoURL"]
+- ["Ps9Equatable", "videoView"]
+- !private ["Ps9Equatable", "view"]
+- ["Ps9Equatable", "viewDidLoad"]
+- ["Ps9Equatable", "viewWillAppear"]
+- ["Ps9Equatable", ""]
+- ["C13ControllerEV312FullscreenVC", "Bool"]
+- !private ["C13ControllerEV312FullscreenVC", "FullscreenVC"]
+- !private ["C13ControllerEV312FullscreenVC", "NSURL"]
+- !private ["C13ControllerEV312FullscreenVC", "NSURLRequest"]
+- ["C13ControllerEV312FullscreenVC", "UITapGestureRecognizer"]
+- ["C13ControllerEV312FullscreenVC", "UIWebView"]
+- ["C13ControllerEV312FullscreenVC", "deinit"]
+- ["C13ControllerEV312FullscreenVC", "didReceiveMemoryWarning"]
+- !private ["C13ControllerEV312FullscreenVC", "dismissViewControllerAnimated"]
+- ["C13ControllerEV312FullscreenVC", "init"]
+- ["C13ControllerEV312FullscreenVC", "leavePopView"]
+- ["C13ControllerEV312FullscreenVC", "tapGesture"]
+- ["C13ControllerEV312FullscreenVC", "videoURL"]
+- ["C13ControllerEV312FullscreenVC", "videoView"]
+- !private ["C13ControllerEV312FullscreenVC", "view"]
+- ["C13ControllerEV312FullscreenVC", "viewDidLoad"]
+- ["C13ControllerEV312FullscreenVC", "viewWillAppear"]
+- !private ["Ps8Hashable", "FullscreenVC"]
+- !private ["Ps8Hashable", "NSURL"]
+- !private ["Ps8Hashable", "NSURLRequest"]
+- ["Ps8Hashable", "UITapGestureRecognizer"]
+- !private ["Ps8Hashable", "addGestureRecognizer"]
+- !private ["Ps8Hashable", "addTarget"]
+- ["Ps8Hashable", "didReceiveMemoryWarning"]
+- !private ["Ps8Hashable", "dismissViewControllerAnimated"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "leavePopView"]
+- !private ["Ps8Hashable", "loadRequest"]
+- !private ["Ps8Hashable", "scrollView"]
+- ["Ps8Hashable", "tapGesture"]
+- !private ["Ps8Hashable", "userInteractionEnabled"]
+- ["Ps8Hashable", "videoURL"]
+- ["Ps8Hashable", "videoView"]
+- !private ["Ps8Hashable", "view"]
+- ["Ps8Hashable", "viewDidLoad"]
+- ["Ps8Hashable", "viewWillAppear"]
+- ["Ps8Hashable", ""]
+- !private ["PSo8NSCoding", "FullscreenVC"]
+- !private ["PSo8NSCoding", "NSURL"]
+- !private ["PSo8NSCoding", "NSURLRequest"]
+- ["PSo8NSCoding", "UITapGestureRecognizer"]
+- !private ["PSo8NSCoding", "addGestureRecognizer"]
+- ["PSo8NSCoding", "didReceiveMemoryWarning"]
+- !private ["PSo8NSCoding", "dismissViewControllerAnimated"]
+- ["PSo8NSCoding", "init"]
+- ["PSo8NSCoding", "leavePopView"]
+- !private ["PSo8NSCoding", "loadRequest"]
+- !private ["PSo8NSCoding", "scrollView"]
+- ["PSo8NSCoding", "tapGesture"]
+- !private ["PSo8NSCoding", "userInteractionEnabled"]
+- ["PSo8NSCoding", "videoURL"]
+- ["PSo8NSCoding", "videoView"]
+- !private ["PSo8NSCoding", "view"]
+- ["PSo8NSCoding", "viewDidLoad"]
+- ["PSo8NSCoding", "viewWillAppear"]
+- ["PSo8NSCoding", ""]
+- !private ["PSo9NSCopying", "init"]
+- !private ["PSo26NSExtensionRequestHandling", "FullscreenVC"]
+- !private ["PSo26NSExtensionRequestHandling", "NSURL"]
+- !private ["PSo26NSExtensionRequestHandling", "NSURLRequest"]
+- ["PSo26NSExtensionRequestHandling", "UITapGestureRecognizer"]
+- ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
+- !private ["PSo26NSExtensionRequestHandling", "dismissViewControllerAnimated"]
+- ["PSo26NSExtensionRequestHandling", "init"]
+- ["PSo26NSExtensionRequestHandling", "leavePopView"]
+- ["PSo26NSExtensionRequestHandling", "tapGesture"]
+- ["PSo26NSExtensionRequestHandling", "videoURL"]
+- ["PSo26NSExtensionRequestHandling", "videoView"]
+- !private ["PSo26NSExtensionRequestHandling", "view"]
+- ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
+- ["PSo26NSExtensionRequestHandling", "viewWillAppear"]
+- ["PSo26NSExtensionRequestHandling", ""]
+- !private ["PSo16NSMutableCopying", "init"]
+- ["CSo8NSObject", "Bool"]
+- !private ["CSo8NSObject", "FullscreenVC"]
+- !private ["CSo8NSObject", "NSURL"]
+- !private ["CSo8NSObject", "NSURLRequest"]
+- ["CSo8NSObject", "UITapGestureRecognizer"]
+- ["CSo8NSObject", "UIWebView"]
+- !private ["CSo8NSObject", "addGestureRecognizer"]
+- !private ["CSo8NSObject", "addTarget"]
+- ["CSo8NSObject", "didReceiveMemoryWarning"]
+- !private ["CSo8NSObject", "dismissViewControllerAnimated"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "leavePopView"]
+- !private ["CSo8NSObject", "loadRequest"]
+- !private ["CSo8NSObject", "scrollView"]
+- ["CSo8NSObject", "tapGesture"]
+- !private ["CSo8NSObject", "userInteractionEnabled"]
+- ["CSo8NSObject", "videoURL"]
+- ["CSo8NSObject", "videoView"]
+- !private ["CSo8NSObject", "view"]
+- ["CSo8NSObject", "viewDidLoad"]
+- ["CSo8NSObject", "viewWillAppear"]
+- !private ["PSo16NSObjectProtocol", "FullscreenVC"]
+- !private ["PSo16NSObjectProtocol", "NSURL"]
+- !private ["PSo16NSObjectProtocol", "NSURLRequest"]
+- ["PSo16NSObjectProtocol", "UITapGestureRecognizer"]
+- !private ["PSo16NSObjectProtocol", "addGestureRecognizer"]
+- !private ["PSo16NSObjectProtocol", "addTarget"]
+- ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
+- !private ["PSo16NSObjectProtocol", "dismissViewControllerAnimated"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "leavePopView"]
+- !private ["PSo16NSObjectProtocol", "loadRequest"]
+- !private ["PSo16NSObjectProtocol", "scrollView"]
+- ["PSo16NSObjectProtocol", "tapGesture"]
+- !private ["PSo16NSObjectProtocol", "userInteractionEnabled"]
+- ["PSo16NSObjectProtocol", "videoURL"]
+- ["PSo16NSObjectProtocol", "videoView"]
+- !private ["PSo16NSObjectProtocol", "view"]
+- ["PSo16NSObjectProtocol", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", "viewWillAppear"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["CSo5NSURL", "init"]
+- !private ["CSo12NSURLRequest", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "addGestureRecognizer"]
+- !private ["PSo29UIAccessibilityIdentification", "loadRequest"]
+- !private ["PSo29UIAccessibilityIdentification", "scrollView"]
+- !private ["PSo29UIAccessibilityIdentification", "userInteractionEnabled"]
+- !private ["PSo12UIAppearance", "addGestureRecognizer"]
+- !private ["PSo12UIAppearance", "loadRequest"]
+- !private ["PSo12UIAppearance", "scrollView"]
+- !private ["PSo12UIAppearance", "userInteractionEnabled"]
+- !private ["PSo21UIAppearanceContainer", "FullscreenVC"]
+- !private ["PSo21UIAppearanceContainer", "NSURL"]
+- !private ["PSo21UIAppearanceContainer", "NSURLRequest"]
+- ["PSo21UIAppearanceContainer", "UITapGestureRecognizer"]
+- !private ["PSo21UIAppearanceContainer", "addGestureRecognizer"]
+- ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
+- !private ["PSo21UIAppearanceContainer", "dismissViewControllerAnimated"]
+- ["PSo21UIAppearanceContainer", "init"]
+- ["PSo21UIAppearanceContainer", "leavePopView"]
+- !private ["PSo21UIAppearanceContainer", "loadRequest"]
+- !private ["PSo21UIAppearanceContainer", "scrollView"]
+- ["PSo21UIAppearanceContainer", "tapGesture"]
+- !private ["PSo21UIAppearanceContainer", "userInteractionEnabled"]
+- ["PSo21UIAppearanceContainer", "videoURL"]
+- ["PSo21UIAppearanceContainer", "videoView"]
+- !private ["PSo21UIAppearanceContainer", "view"]
+- ["PSo21UIAppearanceContainer", "viewDidLoad"]
+- ["PSo21UIAppearanceContainer", "viewWillAppear"]
+- ["PSo21UIAppearanceContainer", ""]
+- !private ["PSo18UIContentContainer", "FullscreenVC"]
+- !private ["PSo18UIContentContainer", "NSURL"]
+- !private ["PSo18UIContentContainer", "NSURLRequest"]
+- ["PSo18UIContentContainer", "UITapGestureRecognizer"]
+- ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
+- !private ["PSo18UIContentContainer", "dismissViewControllerAnimated"]
+- ["PSo18UIContentContainer", "init"]
+- ["PSo18UIContentContainer", "leavePopView"]
+- ["PSo18UIContentContainer", "tapGesture"]
+- ["PSo18UIContentContainer", "videoURL"]
+- ["PSo18UIContentContainer", "videoView"]
+- !private ["PSo18UIContentContainer", "view"]
+- ["PSo18UIContentContainer", "viewDidLoad"]
+- ["PSo18UIContentContainer", "viewWillAppear"]
+- ["PSo18UIContentContainer", ""]
+- !private ["PSo17UICoordinateSpace", "addGestureRecognizer"]
+- !private ["PSo17UICoordinateSpace", "loadRequest"]
+- !private ["PSo17UICoordinateSpace", "scrollView"]
+- !private ["PSo17UICoordinateSpace", "userInteractionEnabled"]
+- !private ["PSo13UIDynamicItem", "addGestureRecognizer"]
+- !private ["PSo13UIDynamicItem", "loadRequest"]
+- !private ["PSo13UIDynamicItem", "scrollView"]
+- !private ["PSo13UIDynamicItem", "userInteractionEnabled"]
+- !private ["PSo18UIFocusEnvironment", "FullscreenVC"]
+- !private ["PSo18UIFocusEnvironment", "NSURL"]
+- !private ["PSo18UIFocusEnvironment", "NSURLRequest"]
+- ["PSo18UIFocusEnvironment", "UITapGestureRecognizer"]
+- !private ["PSo18UIFocusEnvironment", "addGestureRecognizer"]
+- ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
+- !private ["PSo18UIFocusEnvironment", "dismissViewControllerAnimated"]
+- ["PSo18UIFocusEnvironment", "init"]
+- ["PSo18UIFocusEnvironment", "leavePopView"]
+- !private ["PSo18UIFocusEnvironment", "loadRequest"]
+- !private ["PSo18UIFocusEnvironment", "scrollView"]
+- ["PSo18UIFocusEnvironment", "tapGesture"]
+- !private ["PSo18UIFocusEnvironment", "userInteractionEnabled"]
+- ["PSo18UIFocusEnvironment", "videoURL"]
+- ["PSo18UIFocusEnvironment", "videoView"]
+- !private ["PSo18UIFocusEnvironment", "view"]
+- ["PSo18UIFocusEnvironment", "viewDidLoad"]
+- ["PSo18UIFocusEnvironment", "viewWillAppear"]
+- ["PSo18UIFocusEnvironment", ""]
+- !private ["CSo19UIGestureRecognizer", "addTarget"]
+- ["CSo19UIGestureRecognizer", "init"]
+- ["CSo11UIResponder", "Bool"]
+- !private ["CSo11UIResponder", "FullscreenVC"]
+- !private ["CSo11UIResponder", "NSURL"]
+- !private ["CSo11UIResponder", "NSURLRequest"]
+- ["CSo11UIResponder", "UITapGestureRecognizer"]
+- ["CSo11UIResponder", "UIWebView"]
+- !private ["CSo11UIResponder", "addGestureRecognizer"]
+- ["CSo11UIResponder", "didReceiveMemoryWarning"]
+- !private ["CSo11UIResponder", "dismissViewControllerAnimated"]
+- ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "leavePopView"]
+- !private ["CSo11UIResponder", "loadRequest"]
+- !private ["CSo11UIResponder", "scrollView"]
+- ["CSo11UIResponder", "tapGesture"]
+- !private ["CSo11UIResponder", "userInteractionEnabled"]
+- ["CSo11UIResponder", "videoURL"]
+- ["CSo11UIResponder", "videoView"]
+- !private ["CSo11UIResponder", "view"]
+- ["CSo11UIResponder", "viewDidLoad"]
+- ["CSo11UIResponder", "viewWillAppear"]
+- !private ["CSo12UIScrollView", "userInteractionEnabled"]
+- !private ["PSo20UIScrollViewDelegate", "loadRequest"]
+- !private ["PSo20UIScrollViewDelegate", "scrollView"]
+- !private ["PSo16UIStateRestoring", "FullscreenVC"]
+- !private ["PSo16UIStateRestoring", "NSURL"]
+- !private ["PSo16UIStateRestoring", "NSURLRequest"]
+- ["PSo16UIStateRestoring", "UITapGestureRecognizer"]
+- ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
+- !private ["PSo16UIStateRestoring", "dismissViewControllerAnimated"]
+- ["PSo16UIStateRestoring", "init"]
+- ["PSo16UIStateRestoring", "leavePopView"]
+- ["PSo16UIStateRestoring", "tapGesture"]
+- ["PSo16UIStateRestoring", "videoURL"]
+- ["PSo16UIStateRestoring", "videoView"]
+- !private ["PSo16UIStateRestoring", "view"]
+- ["PSo16UIStateRestoring", "viewDidLoad"]
+- ["PSo16UIStateRestoring", "viewWillAppear"]
+- ["PSo16UIStateRestoring", ""]
+- !private ["CSo22UITapGestureRecognizer", "addTarget"]
+- ["CSo22UITapGestureRecognizer", "init"]
+- !private ["PSo18UITraitEnvironment", "FullscreenVC"]
+- !private ["PSo18UITraitEnvironment", "NSURL"]
+- !private ["PSo18UITraitEnvironment", "NSURLRequest"]
+- ["PSo18UITraitEnvironment", "UITapGestureRecognizer"]
+- !private ["PSo18UITraitEnvironment", "addGestureRecognizer"]
+- ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
+- !private ["PSo18UITraitEnvironment", "dismissViewControllerAnimated"]
+- ["PSo18UITraitEnvironment", "init"]
+- ["PSo18UITraitEnvironment", "leavePopView"]
+- !private ["PSo18UITraitEnvironment", "loadRequest"]
+- !private ["PSo18UITraitEnvironment", "scrollView"]
+- ["PSo18UITraitEnvironment", "tapGesture"]
+- !private ["PSo18UITraitEnvironment", "userInteractionEnabled"]
+- ["PSo18UITraitEnvironment", "videoURL"]
+- ["PSo18UITraitEnvironment", "videoView"]
+- !private ["PSo18UITraitEnvironment", "view"]
+- ["PSo18UITraitEnvironment", "viewDidLoad"]
+- ["PSo18UITraitEnvironment", "viewWillAppear"]
+- ["PSo18UITraitEnvironment", ""]
+- !private ["CSo6UIView", "addGestureRecognizer"]
+- !private ["CSo6UIView", "loadRequest"]
+- !private ["CSo6UIView", "scrollView"]
+- !private ["CSo6UIView", "userInteractionEnabled"]
+- ["CSo16UIViewController", "Bool"]
+- !private ["CSo16UIViewController", "FullscreenVC"]
+- !private ["CSo16UIViewController", "NSURL"]
+- !private ["CSo16UIViewController", "NSURLRequest"]
+- ["CSo16UIViewController", "UITapGestureRecognizer"]
+- ["CSo16UIViewController", "UIWebView"]
+- ["CSo16UIViewController", "didReceiveMemoryWarning"]
+- !private ["CSo16UIViewController", "dismissViewControllerAnimated"]
+- ["CSo16UIViewController", "init"]
+- ["CSo16UIViewController", "leavePopView"]
+- ["CSo16UIViewController", "tapGesture"]
+- ["CSo16UIViewController", "videoURL"]
+- ["CSo16UIViewController", "videoView"]
+- !private ["CSo16UIViewController", "view"]
+- ["CSo16UIViewController", "viewDidLoad"]
+- ["CSo16UIViewController", "viewWillAppear"]
+- ["CSo16UIViewController", ""]
+- !private ["CSo9UIWebView", "loadRequest"]
+- !private ["CSo9UIWebView", "scrollView"]
+- !private ["P9Alamofire21URLRequestConvertible", "init"]
+- !private ["P9Alamofire20URLStringConvertible", "init"]
+- !private ["Ps32_FileReferenceLiteralConvertible", "init"]
+- !private ["Ps12_Reflectable", "addGestureRecognizer"]
+- !private ["Ps12_Reflectable", "init"]
+- !private ["Ps12_Reflectable", "loadRequest"]
+- !private ["Ps12_Reflectable", "scrollView"]
+- !private ["Ps12_Reflectable", "userInteractionEnabled"]
+depends-nominal:
+- "Ps9AnyObject"
+- "Ps11CVarArgType"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- "C13ControllerEV312FullscreenVC"
+- "Ps8Hashable"
+- "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- "PSo26NSExtensionRequestHandling"
+- !private "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "CSo5NSURL"
+- !private "CSo12NSURLRequest"
+- !private "PSo29UIAccessibilityIdentification"
+- !private "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- "PSo18UIContentContainer"
+- !private "PSo17UICoordinateSpace"
+- !private "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- "CSo19UIGestureRecognizer"
+- "CSo11UIResponder"
+- !private "CSo12UIScrollView"
+- !private "PSo20UIScrollViewDelegate"
+- "PSo16UIStateRestoring"
+- "CSo22UITapGestureRecognizer"
+- "PSo18UITraitEnvironment"
+- !private "CSo6UIView"
+- "CSo16UIViewController"
+- !private "CSo9UIWebView"
+- !private "P9Alamofire21URLRequestConvertible"
+- !private "P9Alamofire20URLStringConvertible"
+- !private "Ps32_FileReferenceLiteralConvertible"
+- !private "Ps12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Users/Jordy/Documents/PROGRAMMATION/Projet2A/iOS/ControllerEV3/build/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework/Modules/SwiftyJSON.swiftmodule/arm64.swiftmodule"
+- "/Users/Jordy/Documents/PROGRAMMATION/Projet2A/iOS/ControllerEV3/build/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-Swift.h"
+- "/Users/Jordy/Documents/PROGRAMMATION/Projet2A/iOS/ControllerEV3/build/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-umbrella.h"
+- "/Users/Jordy/Documents/PROGRAMMATION/Projet2A/iOS/ControllerEV3/build/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/AVFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreAudio.swiftmodule"
+- "/Users/Jordy/Documents/PROGRAMMATION/Projet2A/iOS/ControllerEV3/build/Debug-iphoneos/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/arm64.swiftmodule"
+- "/Users/Jordy/Documents/PROGRAMMATION/Projet2A/iOS/ControllerEV3/build/Debug-iphoneos/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
+- "/Users/Jordy/Documents/PROGRAMMATION/Projet2A/iOS/ControllerEV3/build/Debug-iphoneos/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
+- "/Users/Jordy/Documents/PROGRAMMATION/Projet2A/iOS/ControllerEV3/build/Debug-iphoneos/Alamofire/Alamofire.framework/Modules/module.modulemap"
+- "/Users/Jordy/Documents/PROGRAMMATION/Projet2A/iOS/ControllerEV3/build/Debug-iphoneos/CDJoystick/CDJoystick.framework/Modules/CDJoystick.swiftmodule/arm64.swiftmodule"
+- "/Users/Jordy/Documents/PROGRAMMATION/Projet2A/iOS/ControllerEV3/build/Debug-iphoneos/CDJoystick/CDJoystick.framework/Headers/CDJoystick-Swift.h"
+- "/Users/Jordy/Documents/PROGRAMMATION/Projet2A/iOS/ControllerEV3/build/Debug-iphoneos/CDJoystick/CDJoystick.framework/Headers/CDJoystick-umbrella.h"
+- "/Users/Jordy/Documents/PROGRAMMATION/Projet2A/iOS/ControllerEV3/build/Debug-iphoneos/CDJoystick/CDJoystick.framework/Modules/module.modulemap"
+- "/Users/Jordy/Documents/PROGRAMMATION/Projet2A/iOS/ControllerEV3/build/Debug-iphoneos/Socket.IO-Client-Swift/SocketIOClientSwift.framework/Modules/SocketIOClientSwift.swiftmodule/arm64.swiftmodule"
+- "/Users/Jordy/Documents/PROGRAMMATION/Projet2A/iOS/ControllerEV3/build/Debug-iphoneos/Socket.IO-Client-Swift/SocketIOClientSwift.framework/Headers/SocketIOClientSwift-Swift.h"
+- "/Users/Jordy/Documents/PROGRAMMATION/Projet2A/iOS/ControllerEV3/build/Debug-iphoneos/Socket.IO-Client-Swift/SocketIOClientSwift.framework/Headers/Socket.IO-Client-Swift-umbrella.h"
+- "/Users/Jordy/Documents/PROGRAMMATION/Projet2A/iOS/ControllerEV3/build/Debug-iphoneos/Socket.IO-Client-Swift/SocketIOClientSwift.framework/Modules/module.modulemap"
+interface-hash: "2ca66972e7bbc324bae6788e5c4178b9"

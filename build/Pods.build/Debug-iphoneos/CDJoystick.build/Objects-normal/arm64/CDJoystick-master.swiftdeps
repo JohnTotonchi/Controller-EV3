@@ -1,0 +1,5 @@
+version: "Apple Swift version 2.2 (swiftlang-703.0.18.8 clang-703.0.31)"
+options: "e7ee486f2e48e0cfd8b1b2c82b77cdab"
+build_time: [517923058, 991229000]
+inputs:
+  "/Users/Jordy/Documents/PROGRAMMATION/Projet2A/iOS/ControllerEV3/Pods/CDJoystick/Pod/Classes/CDJoystick.swift": [517535586, 0]
