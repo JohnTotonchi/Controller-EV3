@@ -1,5 +1,0 @@
-version: "Apple Swift version 2.2 (swiftlang-703.0.18.8 clang-703.0.31)"
-options: "ac9c25c50d731cef9cf2c0823dc9a735"
-build_time: [518119733, 480686000]
-inputs:
-  "/Users/Jordy/Documents/PROGRAMMATION/Projet2A/iOS/ControllerEV3/Pods/Player/Sources/Player.swift": [517679758, 0]

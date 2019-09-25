@@ -1,7 +1,0 @@
-version: "Apple Swift version 2.2 (swiftlang-703.0.18.8 clang-703.0.31)"
-options: "e1b84a1ad9fcb3446b5370e2f0e55a8f"
-build_time: [520034941, 70008000]
-inputs:
-  "/Users/Jordy/Documents/PROGRAMMATION/Projet2A/iOS/ControllerEV3/ControllerEV3/AppDelegate.swift": [517322183, 0]
-  "/Users/Jordy/Documents/PROGRAMMATION/Projet2A/iOS/ControllerEV3/ControllerEV3/FullscreenVC.swift": [518189026, 0]
-  "/Users/Jordy/Documents/PROGRAMMATION/Projet2A/iOS/ControllerEV3/ControllerEV3/HomeVC.swift": [518268121, 0]

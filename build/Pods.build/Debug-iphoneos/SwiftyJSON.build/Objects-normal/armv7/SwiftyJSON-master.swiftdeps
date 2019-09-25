@@ -1,5 +1,0 @@
-version: "Apple Swift version 2.2 (swiftlang-703.0.18.8 clang-703.0.31)"
-options: "347ff42457d4e3377b2d73ece31a230a"
-build_time: [518119734, 580994000]
-inputs:
-  "/Users/Jordy/Documents/PROGRAMMATION/Projet2A/iOS/ControllerEV3/Pods/SwiftyJSON/Source/SwiftyJSON.swift": [517915901, 0]
