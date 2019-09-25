@@ -12,18 +12,16 @@ class FullscreenVC: UIViewController {
 
     @IBOutlet weak var videoView: UIWebView!
     
-    let tapGesture  = UITapGestureRecognizer()
-    var videoURL    = "URL"
+    let tapGesture = UITapGestureRecognizer()
+    var videoURL = "URL"
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
-        tapGesture.addTarget(self, action: #selector(FullscreenVC.leavePopView))
+        tapGesture.addTarget(self, action: #selector(leavePopView))
         self.view.addGestureRecognizer(tapGesture)
-        videoView.scrollView.isUserInteractionEnabled   = false
+        videoView.scrollView.isUserInteractionEnabled = false
     }
     
     override func viewWillAppear(_ animated: Bool)
@@ -31,25 +29,9 @@ class FullscreenVC: UIViewController {
         let request = URLRequest(url: URL(string: videoURL)!)
         videoView.loadRequest(request)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
-    func leavePopView()
+    @objc func leavePopView()
     {
         self.dismiss(animated: true, completion: nil)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

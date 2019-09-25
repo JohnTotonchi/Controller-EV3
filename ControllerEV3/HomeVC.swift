@@ -10,7 +10,6 @@ import UIKit
 import AVKit
 import SwiftyJSON
 import AVFoundation
-//import Alamofire
 import CDJoystick
 import SocketIO
 
@@ -33,33 +32,61 @@ class HomeVC: UIViewController
     @IBOutlet weak var alertSignal: UIView!
     
     // MARK: Variables
-    let videoURL01      = "URL"
-    let videoURL02      = "URL"
-    let socket          = SocketIOClient(socketURL: URL(string: "http://URL")!, config: [.log(true), .forcePolling(true)])
-    var modeManuel      = false
-    var alertIsOn       = false
-    let myColor         = UIColor(red: 229/255, green: 115/255, blue: 115/255, alpha: 1)
+    let firstCameraUrl = "URL"
+    let secondCameraUrl = "URL"
+    let manager = SocketManager(socketURL: URL(string: "http://URL")!, config: [.log(true), .forcePolling(true)])
+    var socket: SocketIOClient!
+    var modeManuel = false
+    var alertIsOn = false
+    let myColor = UIColor(red: 229/255, green: 115/255, blue: 115/255, alpha: 1)
+    var fullscreenVC = FullscreenVC()
     
-    let tapGestureWebView01    = UITapGestureRecognizer()
-    let tapGestureWebView02    = UITapGestureRecognizer()
-    var fullscreenVC           = FullscreenVC()
+    lazy var firstCameraTapGesture: UITapGestureRecognizer = {
+        let tapGesture = UITapGestureRecognizer()
+        tapGesture.addTarget(self, action: #selector(tapFirstWebView))
+        
+        return tapGesture
+    }()
     
+    lazy var secondCameraTapGesture: UITapGestureRecognizer = {
+        let tapGesture = UITapGestureRecognizer()
+        tapGesture.addTarget(self, action: #selector(tapSecondWebView))
+        
+        return tapGesture
+    }()
+    
+    lazy var joystick: CDJoystick = {
+        let joystick = CDJoystick()
+        joystick.substrateColor = .lightGray
+        joystick.substrateBorderColor = .gray
+        joystick.substrateBorderWidth = 1.0
+        joystick.stickSize = CGSize(width: 35, height: 35)
+        joystick.stickColor = .darkGray
+        joystick.stickBorderColor = .black
+        joystick.stickBorderWidth = 2.0
+        joystick.fade = 0.5
+        joystick.backgroundColor = .clear
+        joystick.trackingHandler = { (joystickData) -> () in
+            self.socket.emit("robots/setRobot/move", self.setOrientation(Float(joystickData.velocity.x), y: Float(joystickData.velocity.y)))
+            
+            Thread.sleep(forTimeInterval: 0.2)
+        }
+        
+        return joystick
+    }()
     
     // MARK: Life Cycle
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-        initButtons()
-        initJoystick()
-        initGestures()
+        socket = manager.defaultSocket
+        setupUI()
         
-        fullscreenVC          = self.storyboard?.instantiateViewController(withIdentifier: "FULLSCREEN") as! FullscreenVC
+        fullscreenVC = self.storyboard?.instantiateViewController(withIdentifier: "FULLSCREEN") as! FullscreenVC
         
-        let request01         = URLRequest(url: URL(string: videoURL01)!)
-        let request02         = URLRequest(url: URL(string: videoURL02)!)
-        webView.loadRequest(request01)
-        webView2.loadRequest(request02)
+        webView.loadRequest(URLRequest(url: URL(string: firstCameraUrl)!))
+        webView2.loadRequest(URLRequest(url: URL(string: secondCameraUrl)!))
         
         socket.on("/connect") { data, ack in
             print("Socket connected")
@@ -68,25 +95,19 @@ class HomeVC: UIViewController
         
         socket.on("env/onSetMessage") { data, ack in
             self.displayTf.text  = (data[0] as AnyObject).description
-
         }
         
         socket.on("env/onSetDoor") { data, ack in
-            let json    = JSON(data[0])
+            let json = JSON(data[0])
             
-            if(json["n"] == 0)
-            {
-                if(json["state"] == 0)
-                {
+            if(json["n"] == 0) {
+                if(json["state"] == 0) {
                     self.switchA.setOn(false, animated: true)
-                }
-                else if(json["state"] == 1)
-                {
+                } else if(json["state"] == 1) {
                     self.switchA.setOn(true, animated: true)
                 }
             }
-            else if(json["n"] == 1)
-            {
+            else if(json["n"] == 1) {
                 if(json["state"] == 0)
                 {
                     self.switchB.setOn(false, animated: true)
@@ -103,71 +124,50 @@ class HomeVC: UIViewController
         }
         
         socket.on("env/onSetBalls") { data, ack in
-            let dictionary              = JSON(data[0])
-            var i   = 0
+            let dictionary = JSON(data[0])
+            var i = 0
 
-            for j in 0...dictionary.count
-            {
-                if(dictionary[j]["prison"] == true)
-                {
+            for j in 0...dictionary.count {
+                if(dictionary[j]["prison"] == true) {
                     i+=1
                 }
             }
             
-            self.jailLabel.text         = "Prison " + i.description
-            self.checkpointLabel.text   = "Checkpoint " + dictionary.count.description
+            self.jailLabel.text = "Prison \(i.description)"
+            self.checkpointLabel.text = "Checkpoint \(dictionary.count.description)"
         }
         
         socket.on("env/onSetMode") { data, ack in
-            let response    = JSON(data[0])
+            let response = JSON(data[0])
             
-            if(response == 0)
-            {
-                self.modeManuel                         = false
-                self.clawsBtn.isEnabled                   = false
-                self.clawsBtn.backgroundColor           = UIColor.lightGray
-                self.modeToggle.selectedSegmentIndex    = 0
+            if(response == 0) {
+                self.modeManuel = false
+                self.clawsBtn.isEnabled = false
+                self.clawsBtn.backgroundColor = UIColor.lightGray
+                self.modeToggle.selectedSegmentIndex = 0
+            } else if(response == 1) {
+                self.modeManuel = true
+                self.clawsBtn.isEnabled = true
+                self.modeToggle.selectedSegmentIndex = 1
+                self.clawsBtn.backgroundColor = self.myColor
             }
-            else if(response == 1)
-            {
-                self.modeManuel                         = true
-                self.clawsBtn.isEnabled                   = true
-                self.modeToggle.selectedSegmentIndex    = 1
-                self.clawsBtn.backgroundColor           = self.myColor
-            }
-        }
-        
-        socket.on("env/onSetAllCams") { data, ack in
-            
-        }
-        
-        socket.on("env/onSetCam") { data, ack in
-            
-        }
-        
-        socket.on("env/setAllRobots") { data, ack in
-            
-        }
-        
-        socket.on("env/getRobot") { data, ack in
-            
         }
         
         socket.on("env/onAlerte") { data, ack in
-            print("ALERTE")
-            
-            self.alertIsOn   = true
-            self.alertSignal.backgroundColor =   UIColor.red
+            self.alertIsOn = true
+            self.alertSignal.backgroundColor = UIColor.red
         }
         
         socket.on("env/onAlerteEnd") { data, ack in
-            print("ALERTE END")
-            
-            self.alertIsOn   = false
-            self.alertSignal.backgroundColor =   UIColor.green
+            self.alertIsOn = false
+            self.alertSignal.backgroundColor = UIColor.green
         }
         
         socket.connect()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        joystick.frame = CGRect(x: controlView.frame.midX - 22, y: clawsBtn.frame.maxY + 70, width: 45, height: 45)
     }
     
     override func viewWillAppear(_ animated: Bool)
@@ -175,35 +175,27 @@ class HomeVC: UIViewController
         webView.reload()
         webView2.reload()
     }
-
-    override func didReceiveMemoryWarning()
-    {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     // MARK: IBActions
     @IBAction func switchA(_ sender: AnyObject)
     {
-        if switchA.isOn
-        {
-            let data    = "{\"n\": 0, \"state\": 1}"
-            socket.emit("env/setDoor", data)
+        var data = "{\"n\": 0, \"state\": 1}"
+
+        if (!switchA.isOn) {
+            data = "{\"n\": 0, \"state\": 0}"
         }
-        else if (!switchA.isOn)
-        {
-            let data    = "{\"n\": 0, \"state\": 0}"
-            socket.emit("env/setDoor", data)
-        }
+        
+        socket.emit("env/setDoor", data)
     }
     
     @IBAction func switchB(_ sender: AnyObject)
     {
-        var data    = "{\"n\": 1, \"state\": 1}"
-        if (!switchB.isOn)
-        {
-            data    = "{\"n\": 1, \"state\": 0}"
+        var data = "{\"n\": 1, \"state\": 1}"
+        
+        if (!switchB.isOn) {
+            data = "{\"n\": 1, \"state\": 0}"
         }
+        
         socket.emit("env/setDoor", data)
     }
     
@@ -214,33 +206,29 @@ class HomeVC: UIViewController
     
     @IBAction func sendButton(_ sender: AnyObject)
     {
-        if (!displayTf.text!.isEmpty)
-        {
-            let  data   = "{\"msg\": \"\(displayTf.text as NSString!)\", \"color\": [255, 0, 0]}"
+        if (!displayTf.text!.isEmpty) {
+            let data = "{\"msg\": \"\(displayTf.text!)\", \"color\": [255, 0, 0]}"
             socket.emit("env/setMessage", data)
             
-            let alert   = UIAlertController(title: "Message Posted", message: displayTf.text, preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: "Message Posted", message: displayTf.text, preferredStyle: .alert)
             
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
     }
     
     @IBAction func clickModeToggle(_ sender: AnyObject)
     {
-        if (modeToggle.selectedSegmentIndex == 0)
-        {
+        if (modeToggle.selectedSegmentIndex == 0) {
             socket.emit("env/setMode", 0)
-            self.modeManuel                         = false
-            self.clawsBtn.isEnabled                   = false
-            self.clawsBtn.backgroundColor           = UIColor.lightGray
-        }
-        else if (modeToggle.selectedSegmentIndex == 1)
-        {
+            self.modeManuel = false
+            self.clawsBtn.isEnabled = false
+            self.clawsBtn.backgroundColor = UIColor.lightGray
+        } else if (modeToggle.selectedSegmentIndex == 1) {
             socket.emit("env/setMode", 1)
-            self.modeManuel                         = true
-            self.clawsBtn.isEnabled                   = true
-            self.clawsBtn.backgroundColor           = self.myColor
+            self.modeManuel = true
+            self.clawsBtn.isEnabled = true
+            self.clawsBtn.backgroundColor = self.myColor
         }
     }
     
@@ -250,62 +238,31 @@ class HomeVC: UIViewController
     }
     
     // MARK: Functions
-    fileprivate func initJoystick()
+    private func setupUI()
     {
-        // 1. Initialize an instance of `CDJoystick` using the constructor:
-        let joystick                    = CDJoystick()
-        joystick.frame                  = CGRect(x: controlView.frame.midX + 50,
-                                                 y: clawsBtn.frame.maxY + 70, width: 45, height: 45)
+        alertSignal.layer.cornerRadius = alertSignal.frame.size.width/2
+        alertSignal.clipsToBounds = true
+        alertSignal.backgroundColor = UIColor.green
         
-        joystick.backgroundColor        = .clear
+        buzzerBtn.layer.cornerRadius = 15
+        clawsBtn.layer.cornerRadius = 15
         
-        // 2. Customize the joystick.
-        joystick.substrateColor         = .lightGray
-        joystick.substrateBorderColor   = .gray
-        joystick.substrateBorderWidth   = 1.0
-        joystick.stickSize              = CGSize(width: 35, height: 35)
-        joystick.stickColor             = .darkGray
-        joystick.stickBorderColor       = .black
-        joystick.stickBorderWidth       = 2.0
-        joystick.fade                   = 0.5
+        sendButton.layer.cornerRadius = 0.5 * 15
+        sendButton.clipsToBounds = true
         
-        // 3. Setup the tracking handler to get velocity and angle data:
-        joystick.trackingHandler        = { (joystickData) -> () in
-            self.socket.emit("robots/setRobot/move", self.setOrientation(Float(joystickData.velocity.x), y: Float(joystickData.velocity.y)))
-            
-            Thread.sleep(forTimeInterval: 0.2)
-        }
         
-        // 4. Add the joystick to your view:
+        secondCameraTapGesture.addTarget(self, action: #selector(tapSecondWebView))
+        
+        webView.addGestureRecognizer(firstCameraTapGesture)
+        webView2.addGestureRecognizer(secondCameraTapGesture)
+        
+        webView.scrollView.isUserInteractionEnabled = false
+        webView2.scrollView.isUserInteractionEnabled = false
+        
         view.addSubview(joystick)
     }
     
-    fileprivate func initButtons()
-    {
-        alertSignal.layer.cornerRadius  = 30
-        alertSignal.clipsToBounds       = true
-        alertSignal.backgroundColor     = UIColor.green
-        
-        buzzerBtn.layer.cornerRadius    = 15
-        clawsBtn.layer.cornerRadius     = 15
-        
-        sendButton.layer.cornerRadius   = 0.5 * 15
-        sendButton.clipsToBounds        = true
-    }
-    
-    fileprivate func initGestures()
-    {
-        tapGestureWebView01.addTarget(self, action: #selector(HomeVC.tapFirstWebView))
-        tapGestureWebView02.addTarget(self, action: #selector(HomeVC.tapSecondWebView))
-        
-        webView.addGestureRecognizer(tapGestureWebView01)
-        webView2.addGestureRecognizer(tapGestureWebView02)
-        
-        webView.scrollView.isUserInteractionEnabled   = false
-        webView2.scrollView.isUserInteractionEnabled  = false
-    }
-    
-    fileprivate func setOrientation(_ x: Float, y: Float) -> NSDictionary
+    private func setOrientation(_ x: Float, y: Float) -> NSDictionary
     {
         var direct  = ["up": 0, "down": 0, "left": 0, "right": 0]
         
@@ -368,22 +325,18 @@ class HomeVC: UIViewController
         return direct as NSDictionary
     }
     
-    func tapFirstWebView()
+    @objc func tapFirstWebView()
     {
-        print("TAP FIRST WEB VIEW")
-        
-        fullscreenVC.videoURL               = videoURL01
-        fullscreenVC.modalPresentationStyle = UIModalPresentationStyle.popover
+        fullscreenVC.videoURL = firstCameraUrl
+        fullscreenVC.modalPresentationStyle = .popover
         
         self.present(fullscreenVC, animated: true, completion: nil)
     }
     
-    func tapSecondWebView()
+    @objc func tapSecondWebView()
     {
-        print("TAP SECOND WEB VIEW")
-        
-        fullscreenVC.videoURL               = videoURL02
-        fullscreenVC.modalPresentationStyle = UIModalPresentationStyle.popover
+        fullscreenVC.videoURL = secondCameraUrl
+        fullscreenVC.modalPresentationStyle = .popover
         
         self.present(fullscreenVC, animated: true, completion: nil)
     }

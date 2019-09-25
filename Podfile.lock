@@ -1,18 +1,28 @@
 PODS:
-  - CDJoystick (1.0.0)
-  - Socket.IO-Client-Swift (8.3.0)
-  - SwiftyJSON (3.1.4)
+  - CDJoystick (1.1.0)
+  - Socket.IO-Client-Swift (15.1.0):
+    - Starscream (~> 3.1)
+  - Starscream (3.1.0)
+  - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
   - CDJoystick
-  - Socket.IO-Client-Swift (~> 8.3.0)
+  - Socket.IO-Client-Swift
   - SwiftyJSON
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - CDJoystick
+    - Socket.IO-Client-Swift
+    - Starscream
+    - SwiftyJSON
+
 SPEC CHECKSUMS:
-  CDJoystick: 57e55e2c212c30ba329f26673b1fcd1af6394ae5
-  Socket.IO-Client-Swift: 7ad3aded3c0f74d99555e950ac3aa82ca3eefbaf
-  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  CDJoystick: 5563edf7dbc276cfec6f4606ee2a5b63ee54a15e
+  Socket.IO-Client-Swift: 7cb44c0ffb86e158cee32d0642d30ec5fdcf8f61
+  Starscream: 08172b481e145289c4930cb567230fb55897cfa4
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: bd331222a18477633a9a4e6f90426afc8f17ed8d
+PODFILE CHECKSUM: c31732cf7ab7dd4cb1bb468bdccdf10934f52d59
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.7.5
