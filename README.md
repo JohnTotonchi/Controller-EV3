@@ -6,4 +6,4 @@ Librairies/API:
   * Socket.IO : https://github.com/socketio/socket.io
   * SwiftyJSON : https://github.com/SwiftyJSON/SwiftyJSON
   
-![alt text](https://github.com/Kingamattack/Controller-EV3/blob/master/Screenshots/main.png)
+![alt text](https://github.com/Kingamattack/Controller-EV3/blob/master/Screenshots/home.png)
