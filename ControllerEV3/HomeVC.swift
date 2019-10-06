@@ -13,8 +13,8 @@ import AVFoundation
 import CDJoystick
 import SocketIO
 
-class HomeVC: UIViewController
-{
+class HomeVC: UIViewController {
+    
     // MARK: IBOutlets
     @IBOutlet weak var displayTf: UITextField!
     @IBOutlet weak var switchA: UISwitch!
